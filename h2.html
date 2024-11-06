@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .logo{
+            position: absolute;
+            top: 7px;
+            left:8px;
+        }
+        .head{
+            position:absolute;
+            top: 10px;
+            left: 90px;
+            color: #bc003b;
+            font-size: medium;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           
+            
+        }
+        .cp{
+            position: absolute;
+            top: 200px;
+            right: 300px;
+        }
+        
+        .slop{
+            position: absolute;
+            top: 1900px;
+            right: 300px;
+        }
+        .slop1{
+            position: absolute;
+            top: 3200px;
+            right: 300px;
+        }
+        
+        .h1{
+            position: relative;
+            top: 29px;
+            text-align: center;
+        }
+        .h2{
+            position: relative;
+            top: 2229px;
+            text-align: center;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        ul, ol {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        ul li, ol li {
+            margin-bottom: 10px;
+        }
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+            
+    </style>
+    
+</head>
+<body>
+
+    <section>
+        <img class="logo" src="{{ url_for('static', filename='asset/heart_disease_prediction_logo2_.png') }}" alt="tyre" height="70px" width="70px">
+        <h6 class="head">Disease Prediction</h6>
+    </section>
+    <nav>
+        <a href="/">    HOME</a>
+        <a href="/">ABOUT</a>
+        <a href="d2">DISEASE</a>
+        <a href="/h2">HELP</a>
+    </nav>
+
+
+    <nav>
+        <a href="#ye">  Yellow fingers</a>
+        <a href="#an">Anxiety</a>
+        <a href="#ch">Chronic Disease </a>
+        <a href="#fa">Fatigue</a>
+        <a href="#al">Allergy </a>
+        <a href="#wh">Wheezing</a>
+        <a href="#al">Alcohol Consuming</a>
+        <a href="#sw">Swallowing Difficulty</a>
+        <a href="#cp">Chest Pain</a>
+        
+    
+    </nav>
+
+
+    
+
+    <section class="cp">
+
+        <div class="container" id="ye">
+            <h1>What is Yellow fingers?</h1>
+            <p>Yellow fingers can result from smoking, which stains the skin with nicotine and tar. It can also indicate medical conditions like jaundice or fungal infections. High intake of beta-carotene-rich foods can cause carotenemia, leading to yellowing of the skin. Consulting a healthcare professional is advisable for proper diagnosis and treatment.</p>
+            <ul>
+                <li><strong>Smoking:</strong> One of the most common causes of yellow fingers is smoking. The nicotine and tar in cigarettes can stain the skin and nails.</li>
+                <li><strong>Medical Conditions:</strong> Conditions like jaundice, which causes yellowing of the skin due to liver issues, can also affect the fingers. Carotenemia, an excess of beta-carotene in the blood often due to dietary habits, can also cause yellowing of the skin.</li>
+                <li><strong>Check Diet:</strong>f you consume large amounts of foods high in beta-carotene (like carrots or sweet potatoes), reducing intake might help.
+
+                </li>
+           
+            </ul>
+        </div>
+    
+        <div class="container" id="an">
+            <h1>what is Anxiety</h1>
+            <p>Anxiety is a mental health condition characterized by feelings of worry, nervousness, or fear that are strong enough to interfere with daily activities. It can manifest through physical symptoms like increased heart rate, sweating, and trembling, as well as emotional symptoms such as a sense of impending doom or difficulty concentrating. Anxiety disorders include generalized anxiety disorder, panic disorder, and social anxiety disorder, among others. Treatment typically involves therapy, medication, and lifestyle changes.
+            </p>
+            <ul>
+                <li><strong>Identify Symptoms:</strong> Recognize common anxiety symptoms such as excessive worry, restlessness, fatigue, difficulty concentrating, irritability, muscle tension, and sleep disturbances..</li>
+                <li><strong>Duration and Intensity:</strong>  Note how long these symptoms have persisted and how severe they are. Anxiety disorders often involve symptoms that last for six months or more and significantly impact daily life.</li>
+                
+            </ul>
+        </div>
+    
+        <div class="container" id="ch">
+            <h1>What is Chronic Disease?</h1>
+            <p>A chronic disease is a long-lasting condition that typically persists for three months or longer and generally cannot be cured completely. These diseases can be controlled and managed with lifestyle changes, medications, and ongoing medical care. Chronic diseases often develop slowly and can progress over time. Examples of chronic diseases include:</p>
+            <ol>
+                <li>Heart Disease: Conditions affecting the heart and blood vessels, such as coronary artery disease and hypertension.</li>
+                <li>Diabetes: A metabolic disorder characterized by high blood sugar levels over a prolonged period.</li>
+                <li>Cancer: A group of diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body.</li>
+                
+            </ol>
+        </div>
+    
+        <div class="container" id="fa">
+            <h1>What is Fatigue?</h1>
+            <p>Fatigue is a state of constant and prolonged tiredness and lack of energy. It is more than just feeling sleepy or drowsy; it is a pervasive feeling of exhaustion that does not go away with rest. Fatigue can be physical, mental, or a combination of both. Common causes of fatigue include:</p>
+            <ol>
+                <li>Lifestyle Factors: Poor diet, lack of physical activity, insufficient sleep, and excessive alcohol or drug use.</li>
+                <li>Medical Conditions: Chronic diseases like anemia, diabetes, heart disease, and thyroid disorders.  </li>
+                <li>Mental Health Issues: Depression, anxiety, and stress.</li>
+                <li>Work-Related Factors: Long hours, high stress, and physically or mentally demanding jobs.</li>
+                
+            </ol>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="slop">
+
+        <div class="container" id="al">
+            <h1>What is Allergy ?</h1>
+            <p>An allergy is an immune system response to a foreign substance (allergen) that is not typically harmful to the body. Common allergens include pollen, pet dander, certain foods, insect stings, and medications. When a person with an allergy comes into contact with an allergen, their immune system reacts by producing antibodies that trigger the release of chemicals like histamine. This can lead to symptoms such as:</p>
+            <ul>
+                <li><strong>Respiratory Symptoms:</strong> Sneezing, runny or stuffy nose, coughing, and wheezing.</li>
+                <li><strong> Skin Reactions:</strong> Itching, hives, eczema, or rashes.</li>
+                <li><strong>Eye Symptoms: </strong>Red, itchy, or watery eyes.</li>
+                
+            </ul>
+        </div>
+    
+        <div class="container" id="wh">
+            <h1>What is Wheezing ? </h1>
+            <p>
+                Wheezing is a high-pitched whistling sound made while breathing, typically heard when exhaling, but it can also occur when inhaling. It is caused by narrowed or obstructed airways. Wheezing can be a symptom of various respiratory conditions and is often accompanied by other symptoms such as shortness of breath, coughing, or chest tightness. Common causes of wheezing include:</p>
+            
+        </div>
+    
+        <div class="container" id="ai">
+            <h1>What is Alcohol Consuming?</h1>
+            <p>
+                Alcohol consumption refers to the intake of beverages containing ethyl alcohol (ethanol), which is the psychoactive substance in alcoholic drinks such as beer, wine, and spirits. When consumed, alcohol acts as a central nervous system depressant, affecting brain function and behavior. Here are some key points about alcohol consumption:   </p>
+            
+        </div>
+    
+        <div class="container" id="sw">
+            <h1>What is Swallowing Difficulty ?</h1>
+            <p>
+                Swallowing difficulty, also known as dysphagia, refers to the sensation of having trouble swallowing food, liquids, or saliva. It can occur at any stage of the swallowing process, from the mouth to the stomach, and can be caused by various underlying conditions. Symptoms of dysphagia include pain while swallowing, the sensation of food being stuck in the throat or chest, coughing or choking during eating, and regurgitation of food.</p>
+            <ol>
+                <li>Neurological Disorders: Conditions such as stroke, Parkinson's disease, multiple sclerosis, and amyotrophic lateral sclerosis (ALS) can affect the nerves and muscles involved in swallowing.</li>
+                <li>Infections: Infections like tonsillitis or esophagitis can lead to swelling and discomfort in the throat.</li>
+               
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="slop1">
+
+        <div class="container" id="cp">
+            <h1>What is Chest Pain ?</h1>
+            <p>
+                Chest pain is a discomfort or pain felt in the chest area, which can vary in intensity from mild to severe. It can be caused by a wide range of conditions, some of which may be serious. The characteristics of chest pain can include sharp, dull, aching, or burning sensations and can be constant or intermittent.</p>
+            
+        </div>
+    
+    
+    
+        
+    </section>
+   
+
+   
+
+   
+</body>
+</html>

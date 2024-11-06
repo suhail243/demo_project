@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+    <style>
+      .logo{
+    position: absolute;
+    top: 7px;
+    left:8px;
+}
+.head{
+    position:absolute;
+    top: 80px;
+    left: 120px;
+    color: #bc003b;
+    font-size: xx-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: url('{{ url_for('static', filename='asset/back.jpg') }}');
+  padding: 0 10px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Make background transparent */
+    margin: 50px auto;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+    padding: 30px;
+}
+
+.wrapper .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fec107;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper .form {
+    width: 100%;
+}
+
+.wrapper .form .inputfield {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .inputfield label {
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea {
+    width: 100%;
+    height: 125px;
+    resize: none;
+}
+
+.wrapper .form .inputfield .custom_select {
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+}
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus {
+    border: 1px solid #fec107;
+}
+
+.wrapper .form .inputfield p {
+    font-size: 14px;
+    color: #757575;
+}
+
+.wrapper .form .inputfield .check {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.wrapper .form .inputfield .check .checkmark {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fec107;
+    display: block;
+    position: relative;
+}
+
+.wrapper .form .inputfield .check .checkmark:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark {
+    background: #fec107;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before {
+    display: block;
+}
+
+.wrapper .form .inputfield .btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0px;
+    background: #fec107;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover {
+    background: #ffd658;
+}
+
+.wrapper .form .inputfield:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 420px) {
+    .wrapper .form .inputfield {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper .form .inputfield label {
+        margin-bottom: 5px;
+    }
+    .wrapper .form .inputfield.terms {
+        flex-direction: row;
+    }
+}
+:root {
+    --z24: translateZ(24.5px);
+    --z80: translateZ(80px);
+    --ts: all .5s ease;
+    --x90: rotateX(90deg);
+    --xm90: rotateX(-90deg);
+    --y90: rotateY(90deg);
+    --ym90: rotateY(-90deg);
+  }
+  
+  nav {
+    width: 100%;
+    padding: 16px 16px 0 16px;
+    position: relative;
+  }
+  
+  ol {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .main-menu {
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  
+  li {
+    width: 160px;
+    position: relative;
+    cursor: pointer;
+  }
+  li span {
+    width: 100%;
+    height: 49px;
+    display: block;
+    position: relative;
+    transition: var(--ts);
+    transform-style: preserve-3d;
+  }
+  li span::before, li span::after {
+    width: 100%;
+    padding: 16px 0;
+    display: block;
+    position: absolute;
+    border-radius: 8px;
+    font: 400 14px "Consolas";
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .main-item:nth-of-type(2),
+  .main-item:nth-of-type(4) {
+    margin: 0 2px;
+  }
+  
+  .main-item:nth-of-type(3)::before,
+  .main-item:nth-of-type(4)::before {
+    width: 100%;
+    top: 25px;
+    display: block;
+    position: absolute;
+    color: #fff;
+    font: 400 24px "Consolas";
+    text-align: center;
+    transition: var(--ts);
+    z-index: 100;
+    content: "▾";
+  }
+  
+  .main-item:hover > span {
+    transform: var(--x90);
+  }
+  .main-item > span::before {
+    background: #000;
+    color: #fff;
+    transform: var(--z24);
+    box-shadow: 0 8px 6px -6px #888;
+  }
+  .main-item > span::after {
+    background: #ff9900;
+    transform: var(--xm90) var(--z24);
+  }
+  
+  .home::before, .home::after {
+    content: "home";
+  }
+  
+  .about::before, .about::after {
+    content: "about";
+  }
+  
+  .widgets::before, .widgets::after {
+    content: "Disease";
+  }
+  
+  .kabobs::before, .kabobs::after {
+    content: "Help";
+  }
+  
+  .contact::before, .contact::after {
+    content: "Diasease";
+  }
+  .contact1::before, .contact1::after {
+    content: "Help";
+  }
+  
+  .sub-menu {   
+    top: 51px;
+    display: none;
+    position: absolute;
+  }
+  .sub-menu li {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  .sub-menu li:nth-of-type(2) {
+    margin: 2px 0;
+  }
+  
+  .sub-item:nth-of-type(1) {
+    -webkit-animation: fade 0.5s ease 0.2s both;
+            animation: fade 0.5s ease 0.2s both;
+  }
+  
+  .sub-item:nth-of-type(2) {
+    -webkit-animation: fade 0.5s ease 0.4s both;
+            animation: fade 0.5s ease 0.4s both;
+  }
+  
+  .sub-item:nth-of-type(3) {
+    -webkit-animation: fade 0.5s ease 0.6s both;
+            animation: fade 0.5s ease 0.6s both;
+  }
+  
+  @-webkit-keyframes fade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .sub-item span::before {
+    background: #008080;
+    color: #fff;
+    transform: var(--z80);
+  }
+  .sub-item span::after {
+    background: #bc003b;
+    color: #fff;
+  }
+  
+  .item-left:hover span {
+    transform: var(--y90);
+  }
+  .item-left span::after {
+    transform: var(--ym90) var(--z80);
+  }
+  
+  .item-right:hover span {
+    transform: var(--ym90);
+  }
+  .item-right span::after {
+    transform: var(--y90) var(--z80);
+  }
+  
+  .small::before, .small::after {
+    content: "heart";
+  }
+  
+  .standart::before, .standart::after {
+    content: "lung";
+  }
+  
+  .big::before, .big::after {
+    content: "diabities";
+  }
+  
+  .premium::before, .premium::after {
+    content: "premium kabobs";
+  }
+  
+  .combo::before, .combo::after {
+    content: "combo kabobs";
+  }
+  
+  .special::before, .special::after {
+    content: "special kabobs";
+  }
+  
+  .main-item:nth-of-type(3):hover::before,
+  .main-item:nth-of-type(4):hover::before {
+    color: #000;
+    content: "▴";
+  }
+  .main-item:nth-of-type(3):hover .sub-menu,
+  .main-item:nth-of-type(4):hover .sub-menu {
+    display: block;
+  }
+  
+  @media screen and (min-width: 321px) and (max-width: 839px) {
+    nav {
+      width: 320px;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 839px) {
+    .main-item:nth-of-type(2),
+  .main-item:nth-of-type(4) {
+      margin: 3px 0;
+    }
+  
+    .sub-menu {
+      position: relative;
+      top: 1px;
+      padding: 2px 0 1px 0;
+    }
+    .sub-menu li span::before {
+      transform: var(--z24);
+    }
+    .sub-menu li span::after {
+      transform: rotateY(0deg) var(--x90) var(--z24);
+    }
+    .sub-menu li:hover span {
+      transform: var(--xm90);
+    }
+  }
+  .bar{
+      position:absolute;
+      top: 60px;
+      right: 30px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  .move{
+
+    position: absolute;
+    top: 200px;
+    left: 500px;
+  }
+    </style>
+
+
+</head>
+<body>
+
+    <section>
+        <img class="logo" src="{{ url_for('static', filename='asset/heart_disease_prediction_logo2_.png') }}" alt="tyre" height="120px" width="120px">
+        <h2 class="head">Disease Prediction</h2>
+    </section>
+    <section class="bar">
+                
+            
+            <nav>
+                <ol class="main-menu">
+                <a href="/"><li class="main-item"><span class="home"></span></li></a>
+                <a href="/"><li class="main-item"><span class="about"></span></li></a>
+                
+                
+                <a href="/d3"><li class="main-item"><span class="contact"></span></li></a>
+                <a href="/h3"><li class="main-item"><span class="contact1"></span></li></a>
+                </ol>
+            </nav>
+  
+    </section>
+
+
+
+  
+    <section class="move">
+      <div class="wrapper">
+          <form action="/predict_diabit" method="post">
+              <div class="title">Diabites Prediction Form</div>
+              <div class="form">
+
+                <div class="inputfield">
+                  <label>name</label>
+                  <input type="text" class="input" name="name" required>
+              </div>
+
+                <div class="inputfield">
+                    <label>Gender</label>
+                    <div class="custom_select">
+                      <select name="gender" required>
+                        <option value="">Select</option>
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                      </select>
+                    </div>
+                    
+                </div>
+
+
+
+
+                  <div class="inputfield">
+                      <label>Age</label>
+                      <input type="number" class="input" name="age" required>
+                  </div>
+                  
+                <div class="inputfield">
+                  <label>hypertension</label>
+                  <div class="custom_select">
+                    <select name="hypertension" required>
+                      <option value="">Select</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                    </select>
+                  </div>
+                 
+              </div>
+                  <div class="inputfield">
+                      <label>Heart Disease</label>
+                      <div class="custom_select">
+                        <select name="heart_disease" required>
+                          <option value="">Select</option>
+                          <option value="0">No</option>
+                          <option value="1">Yes</option>
+                          
+                        </select>
+                      </div>
+        
+                  </div>
+                 
+                  <div class="inputfield">
+                    <label>BMI</label>
+                    <input type="number" class="input" name="bmi" required>
+                </div>
+
+                <div class="inputfield">
+                    <label> HbA1c Level</label>
+                    <input type="number" class="input" name="HbA1c_level" required>
+                </div>
+                
+                  
+               
+                  <div class="inputfield">
+                    <label>Blood Glucose Level</label>
+                    <input type="number" class="input" name="blood_glucose_level" required>
+                </div>
+
+                
+                 
+                  <div class="inputfield">
+                      <input type="submit" value="Submit" class="btn">
+                  </div>
+              </div>
+          </form>
+      </div>
+  </section>
+        
+    
+</body>
+
+</html>

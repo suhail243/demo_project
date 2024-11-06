@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>Enter Information for QR Code Generation</h1>
+    <form method="POST" action="/">
+        <label for="dataInput">Enter your data:</label>
+        <input type="text" id="dataInput" name="dataInput" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if current_time and future_time and qr_code_data %}
+    <h2>Generated QR Code and Time Information</h2>
+    <table border="1" style="width: 50%;">
+        <thead>
+            <tr>
+                <th>Information</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Current Time</td>
+                <td>{{ current_time }}</td>
+            </tr>
+            <tr>
+                <td>Time 40 Minutes Later</td>
+                <td>{{ future_time }}</td>
+            </tr>
+            <tr>
+                <td>QR Code</td>
+                <td>
+                    <!-- Display the QR code image -->
+                    <img src="data:image/png;base64,{{ qr_code_data }}" alt="QR Code">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- Button to download PDF -->
+    <a href="/download_pdf?pdf_file={{ pdf_file }}" download="result.pdf">
+        <button type="button">Download PDF</button>
+    </a>
+    {% endif %}
+</body>
+</html>

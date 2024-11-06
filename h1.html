@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Information</title>
+    <style>
+        body {
+            
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .logo{
+            position: absolute;
+            top: 7px;
+            left:8px;
+        }
+        .head{
+            position:absolute;
+            top: 10px;
+            left: 90px;
+            color: #bc003b;
+            font-size: medium;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           
+            
+        }
+        .cp{
+            position: absolute;
+            top: 200px;
+            right: 300px;
+        }
+        
+        .slop{
+            position: absolute;
+            top: 2500px;
+            right: 300px;
+        }
+        .slop1{
+            position: absolute;
+            top: 3900px;
+            right: 300px;
+        }
+        
+        .h1{
+            position: relative;
+            top: 29px;
+            text-align: center;
+        }
+        .h2{
+            position: relative;
+            top: 2229px;
+            text-align: center;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        ul, ol {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        ul li, ol li {
+            margin-bottom: 10px;
+        }
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </style>
+
+</head>
+<body>
+
+    <section>
+        <img class="logo" src="{{ url_for('static', filename='asset/heart_disease_prediction_logo2_.png') }}" alt="tyre" height="70px" width="70px">
+        <h6 class="head">Disease Prediction</h6>
+    </section>
+    <nav>
+        <a href="/">    HOME</a>
+        <a href="/">ABOUT</a>
+        <a href="/d1">DISEASE</a>
+        <a href="/h1">HELP</a>
+    </nav>
+
+
+    <nav>
+        <a href="#cp">    Chest Pain</a>
+        <a href="#slope">Slope</a>
+        <a href="#number">Number of major vessels </a>
+        <a href="#trestbps">Trestbps</a>
+        <a href="#exercise"> Exercise-induced angina </a>
+        <a href="#st">ST depression</a>
+        <a href="#thalium">Thalium stress test result</a>
+        <a href="#thalach">Thalach</a>
+        <a href="#restecg">Restecg</a>
+        
+    
+    </nav>
+<h1 class="h1" id="cp">Chest Pain</h1>
+<h1 class="h2">Slope</h1>
+    
+
+    <section class="cp">
+
+        <div class="container" id="typical-angina">
+            <h1>What is Typical Angina?</h1>
+            <p>Typical angina is chest pain or discomfort caused by reduced blood flow to the heart, usually triggered by physical activity or stress and relieved by rest.</p>
+            <ul>
+                <li><strong>Monitor Symptoms:</strong> Look for chest pain, pressure, or tightness, especially during physical activity or stress.</li>
+                <li><strong>Radiating Pain:</strong> Note if pain spreads to shoulders, arms, neck, jaw, or back.</li>
+                <li><strong>Relief with Rest:</strong> Observe if the pain subsides with rest or nitroglycerin.</li>
+                <li><strong>Evaluate Risk Factors:</strong> Consider family history, lifestyle factors, and conditions like high blood pressure or diabetes.</li>
+                <li><strong>Consult a Doctor:</strong> Get a thorough evaluation and diagnostic tests from a healthcare provider.</li>
+            </ul>
+        </div>
+    
+        <div class="container" id="non-anginal-pain">
+            <h1>Non-Anginal Pain</h1>
+            <p>Non-anginal pain is chest pain that is not related to reduced blood flow to the heart. It can be caused by various other conditions such as gastrointestinal issues (like acid reflux), musculoskeletal problems (like muscle strain), lung conditions (like pleuritis), or anxiety. Non-anginal pain typically does not follow the patterns associated with angina and may vary in location, intensity, and duration.</p>
+            <ul>
+                <li><strong>Monitor Symptoms:</strong> Look for chest pain that does not fit the typical patterns of angina, such as sharp, stabbing, or burning sensations.</li>
+                <li><strong>Evaluate Triggers:</strong> Notice if the pain is related to specific activities, positions, or foods, rather than physical exertion or stress.</li>
+                <li><strong>Duration and Relief:</strong> Observe if the pain lasts longer or is relieved by antacids, changes in posture, or other non-cardiac interventions.</li>
+                <li><strong>Associated Symptoms:</strong> Pay attention to symptoms like indigestion, heartburn, difficulty swallowing, or musculoskeletal pain.</li>
+                <li><strong>Consult a Doctor:</strong> Seek a healthcare provider's evaluation to identify the underlying cause of the pain and rule out cardiac issues.</li>
+            </ul>
+        </div>
+    
+        <div class="container" id="asymptomatic">
+            <h1>What is Asymptomatic?</h1>
+            <p>"Asymptomatic" means showing no symptoms despite having a disease or condition. An asymptomatic person does not exhibit the typical signs or symptoms associated with the condition they have. For example, someone with high blood pressure or early-stage diabetes may not feel unwell or notice any issues but still have the underlying condition.</p>
+            <ol>
+                <li>Regular Check-Ups: Schedule regular visits to your healthcare provider for routine examinations and screenings.</li>
+                <li>Diagnostic Tests: Undergo recommended tests like blood pressure checks, blood tests, cholesterol levels, and glucose levels.</li>
+                <li>Family History: Be aware of any family history of chronic conditions that might increase your risk.</li>
+                <li>Risk Factor Management: Maintain a healthy lifestyle, including a balanced diet, regular exercise, and avoiding smoking or excessive alcohol consumption.</li>
+                <li>Health Monitoring: Use at-home health monitoring devices, such as blood pressure monitors or glucose meters, if advised by your doctor.</li>
+            </ol>
+        </div>
+    
+        <div class="container" id="atypical-angina">
+            <h1>What is Atypical Angina?</h1>
+            <p>Atypical angina is chest pain or discomfort that does not follow the usual pattern of typical angina. It may occur at rest, last longer, and not be triggered by physical exertion or stress. It can also present with symptoms that are less predictable and may include unusual sensations like sharp or stabbing pain.</p>
+            <ol>
+                <li>Monitor Symptoms: Look for chest pain or discomfort that occurs at rest, lasts longer, or feels sharp or stabbing.</li>
+                <li>Unusual Patterns: Notice if the pain is unpredictable and not linked to physical exertion or stress.</li>
+                <li>Associated Symptoms: Pay attention to other symptoms like shortness of breath, fatigue, nausea, or dizziness.</li>
+                <li>Evaluate Risk Factors: Consider if you have risk factors like high blood pressure, diabetes, smoking, or a family history of heart disease.</li>
+                <li>Consult a Doctor: Visit your healthcare provider for a thorough evaluation and diagnostic tests.</li>
+            </ol>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="slop">
+
+        <div class="container" id="slope">
+            <h1>What is Slope ?</h1>
+            <p>The slope of the peak exercise ST segment is a medical measurement used in cardiology, often included in datasets related to heart disease. It refers to the direction and angle of the ST segment on an electrocardiogram (ECG or EKG) during peak exercise. The ST segment represents the period between the end of the S wave (the final portion of the QRS complex) and the start of the T wave, which corresponds to the interval between ventricular depolarization and repolarization.</p>
+            <ul>
+                <li><strong>Upsloping:</strong> The ST segment rises gradually. This can be a normal finding, especially in younger individuals.</li>
+                <li><strong>Flat:</strong> The ST segment is horizontal. This can sometimes indicate ischemia, where the heart muscle is not getting enough blood flow.</li>
+                <li><strong>Downsloping:</strong> The ST segment falls. This is often considered more indicative of myocardial ischemia and is associated with a higher risk of coronary artery disease.</li>
+                
+            </ul>
+        </div>
+    
+        <div class="container" id="number">
+            <h1>What is Number of major vessels ? </h1>
+            <p>The "number of major vessels (0-4) colored by fluoroscopy" is a feature often found in medical datasets related to heart disease. It refers to the number of major coronary arteries that are visible (or "colored") during a fluoroscopy procedure, which is an imaging technique that uses X-rays to obtain real-time moving images of the interior of an object, in this case, the heart and its vessels.</p>
+            
+        </div>
+    
+        <div class="container" id="trestbps">
+            <h1>What is Trestbps?</h1>
+            <p>
+                In medical data, particularly in datasets related to heart disease, "trestbps" stands for "resting blood pressure." It is typically measured in millimeters of mercury (mm Hg) and is recorded as the systolic blood pressure when a person is at rest. The systolic blood pressure is the higher number in a blood pressure reading and represents the pressure in the arteries when the heart beats.</p>
+            
+        </div>
+    
+        <div class="container" id="exercise">
+            <h1>What is Exercise-induced angina ?</h1>
+            <p>
+                Exercise-induced angina, also known as exertional angina or stable angina, is chest pain or discomfort that occurs when the heart muscle (myocardium) doesn't get enough oxygen-rich blood during physical exertion or stress. This condition is a common symptom of coronary artery disease (CAD), which is caused by the narrowing or blockage of the coronary arteries due to the buildup of plaque (atherosclerosis).</p>
+            <ol>
+                <li>Symptoms:Symptoms include chest pain or discomfort, which may feel like pressure, squeezing, fullness, or pain. The discomfort may also radiate to the shoulders, arms, neck, jaw, or back.</li>
+                <li>Diagnosis: it is often diagnosed using stress tests, where the heart is monitored while the patient exercises, and by assessing the patient's symptoms and medical history.</li>
+               
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="slop1">
+
+        <div class="container" id="st">
+            <h1>What is ST depression ?</h1>
+            <p>
+                ST depression is a finding on an electrocardiogram (ECG or EKG) that indicates a downward deflection of the ST segment. The ST segment represents the period between ventricular depolarization and repolarization, specifically the time when the heart's ventricles are preparing to contract again.</p>
+            
+        </div>
+    
+        <div class="container" id="thalium">
+            <h1>What is Thalium stress test result: ? </h1>
+            <p>A Thallium stress test (or more commonly, a nuclear stress test) is a type of imaging test that shows how well blood flows into the heart muscle, both at rest and during activity. During this test, a small amount of radioactive substance (such as thallium or technetium) is injected into the bloodstream, and a special camera captures images of the heart. The results of this test can help identify various cardiac conditions, particularly coronary artery disease (CAD).</p>
+            <ul>
+                <li><strong>Normal:</strong> Indicates that blood flow to the heart muscle is adequate both at rest and during exercise.</li>
+                <li><strong>Fixed Defect:</strong> A fixed defect means that there is an area of the heart muscle that does not receive adequate blood flow at any time, both during rest and exercise.</li>
+                <li><strong>Reversible Defect:</strong> A reversible defect is an area of the heart muscle that receives adequate blood flow at rest but not during exercise or stress.</li>
+                <li><strong>Not Described:</strong> Indicates that the result is either inconclusive or not adequately described in the report.</li>
+            </ul>
+        </div>
+    
+        <div class="container" id="thalach">
+            <h1>What is Thalach ?</h1>
+            <p>
+                "Thalach" refers to the maximum heart rate achieved during a stress test. It is an important indicator of cardiovascular fitness and heart function. The maximum heart rate is measured in beats per minute (bpm) and helps assess how well the heart responds to physical stress. It is often used to diagnose potential heart problems, such as coronary artery disease, and to evaluate overall heart health. The value can vary based on individual fitness levels, age, and medical conditions.</p>
+            
+        </div>
+    
+        <div class="container" id="restecg">
+            <h1>What is Restecg ?</h1>
+            <p>
+                Resting electrocardiographic (ECG) results provide important information about the electrical activity of the heart at rest. The results can be categorized as follows.</p>
+                <ul>
+                    <li><strong>Normal:</strong> There are no signs of abnormalities such as arrhythmias, conduction blocks, or structural issues.</li>
+                    <li><strong>Having ST-T Wave Abnormality:</strong> These abnormalities can be a sign of underlying heart disease, such as coronary artery disease or other cardiac conditions.</li>
+                    <li><strong>Showing Probable:</strong> Indicates that the left ventricle (the heart's main pumping chamber) is enlarged or thickened.</li>
+                    
+                </ul>
+        </div>
+    </section>
+   
+
+   
+
+   
+</body>
+</html>
