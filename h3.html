@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('asset/back.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+        .logo{
+            position: absolute;
+            top: 7px;
+            left:8px;
+        }
+        .head{
+            position:absolute;
+            top: 10px;
+            left: 90px;
+            color: #bc003b;
+            font-size: medium;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           
+            
+        }
+        .cp{
+            position: absolute;
+            top: 200px;
+            right: 300px;
+        }
+        
+        .slop{
+            position: absolute;
+            top: 1900px;
+            right: 300px;
+        }
+        .slop1{
+            position: absolute;
+            top: 3200px;
+            right: 300px;
+        }
+        
+        .h1{
+            position: relative;
+            top: 29px;
+            text-align: center;
+        }
+        .h2{
+            position: relative;
+            top: 2229px;
+            text-align: center;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        ul, ol {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        ul li, ol li {
+            margin-bottom: 10px;
+        }
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+            
+    </style>
+    
+</head>
+<body>
+
+    <section>
+        <img class="logo" src="{{ url_for('static', filename='asset/heart_disease_prediction_logo2_.png') }}" alt="tyre" height="70px" width="70px">
+        <h6 class="head">Disease Prediction</h6>
+    </section>
+    <nav>
+        <a href="/">    HOME</a>
+        <a href="/">ABOUT</a>
+        <a href="/d3">DISEASE</a>
+        <a href="/h3">HELP</a>
+    </nav>
+
+
+    <nav>
+        <a href="#hy"> Hypertention</a>
+        <a href="#he">Heart Disease</a>
+        <a href="#bm">BMI </a>
+        <a href="#hb">HbA1c_level	</a>
+        <a href="#bl">Blood Glucose Level</a>
+       
+        
+    
+    </nav>
+
+
+    
+
+    <section class="cp">
+
+        <div class="container" id="hy">
+            <h1>What is Hypertention?</h1>
+            <p>
+                Hypertension, commonly known as high blood pressure, is a condition where the force of the blood against the walls of the arteries is consistently too high. This increased pressure can lead to serious health problems over time, including heart disease, stroke, and kidney damage.</p>
+            <ul>
+                <li><strong>Blood Pressure Measurements:</strong> Normal blood pressure is typically around 120/80 mmHg. Hypertension is generally defined as having a blood pressure reading consistently at or above 130/80 mmHg.</li>
+                <li><strong>Symptoms:</strong> Often, hypertension has no noticeable symptoms, which is why it is sometimes called the "silent killer." Regular monitoring is crucial for detection.</li>
+                <li><strong>Kidney Damage::</strong> Can lead to kidney disease or kidney failure.
+
+                </li>
+           
+            </ul>
+        </div>
+    
+        <div class="container" id="he">
+            <h1>what is Heart Disease</h1>
+            <p>Heart disease, also known as cardiovascular disease, encompasses a range of conditions that affect the heart and blood vessels. These conditions can lead to various complications, including heart attacks, strokes, and heart failure.
+            </p>
+            <ul>
+                <li><strong>Description:</strong>The most common type of heart disease, CAD occurs when the coronary arteries that supply blood to the heart muscle become narrowed or blocked due to plaque buildup (atherosclerosis).</li>
+                <li><strong>Symptoms:</strong>  Chest pain, shortness of breath, nausea, and pain in the arm or jaw.</li>
+                
+            </ul>
+        </div>
+    
+        <div class="container" id="hb">
+            <h1>What is HbA1c_level	?</h1>
+            <p>HbA1c, or glycated hemoglobin, is a blood test that measures the average level of blood glucose (sugar) over the past 2 to 3 months. It provides an indication of how well blood sugar levels have been controlled over time, which is crucial for managing diabetes.</p>
+            <ol>
+                <li>Average Blood Sugar Levels: It reflects the average blood glucose levels over the previous 2-3 months because red blood cells have a lifespan of about 120 days.</li>
+                <li>Blood Sample: The test is performed by taking a blood sample, usually from a vein in the arm.</li>
+                <li>Recent Changes: Significant changes in blood sugar levels in the recent past might not be fully reflected in the HbA1c level since it provides an average over a longer period.</li>
+                
+            </ol>
+        </div>
+    
+        <div class="container" id="bl">
+            <h1>What is Blood Glucose Level?</h1>
+            <p>
+                Blood glucose level refers to the amount of glucose (sugar) present in the blood. Glucose is a primary source of energy for the body’s cells, but maintaining appropriate levels is crucial for overall health. Abnormal blood glucose levels can indicate conditions like diabetes or hypoglycemia (low blood sugar).</p>
+            <ol>
+                <li>Description: Measures blood glucose after an overnight fast (usually 8-12 hours without eating or drinking anything other than water).</li>
+                <li>Normal Range: Typically 70-99 mg/dL (milligrams per deciliter).  </li>
+                <li>Diabetes Management: Regular monitoring helps in managing diabetes, adjusting medications, and making lifestyle changes.</li>
+                <li>Identifying Abnormalities: Helps in diagnosing conditions such as prediabetes and diabetes, and in managing hypoglycemia or hyperglycemia.</li>
+                
+            </ol>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="slop">
+
+        <div class="container" id="bm">
+            <h1>What is BMI ?</h1>
+            <p>
+                Body Mass Index (BMI) is a numerical value derived from a person’s weight and height. It is used as a screening tool to categorize individuals into different weight status categories, which can help assess whether someone is underweight, normal weight, overweight, or obese. BMI is a simple and widely used measure for evaluating body weight in relation to height.</p>
+            <ul>
+                <li><strong>calculat BMI:</strong>BMI is calculated by dividing weight in kilograms by the square of height in meters, or by multiplying weight in pounds by 703 and dividing by the square of height in inches.
+                    </li>
+                <li><strong> Skin Reactions:</strong> Itching, hives, eczema, or rashes.</li>
+                <li><strong>Eye Symptoms: </strong>Red, itchy, or watery eyes.</li>
+                
+            </ul>
+        </div>
+    
+       
+    </section>
+
+
+
+
+
+
+
+    
+    
+    
+        
+    </section>
+   
+
+   
+
+   
+</body>
+</html>

@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .logo{
+            position: absolute;
+            top: 7px;
+            left:8px;
+        }
+        .head{
+            position:absolute;
+            top: 80px;
+            left: 120px;
+            color: #bc003b;
+            font-size: xx-large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           
+            
+        }
+
+        
+
+.dr{
+  position: relative;
+  top: 900px;
+  left: -940px;
+
+}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        .vi{
+          position: absolute;
+          top: 2600px;
+          right: 30px;
+        }
+        
+        .bns{
+            position: absolute;
+            top: 1019px;
+            right: 60px; 
+          
+        }
+        .bns1{
+            position:absolute;
+            top: 888px;
+        }
+        .bns3{
+            position: absolute;
+            top: 1490px;
+            right: 100px;
+        }
+        .bns2{
+            position: absolute;
+            top: 880px;
+          
+            height: 50px;
+            width: 100%;
+            background-color: #ca0040;
+            
+        }
+        
+        .line{
+            position: absolute;
+            top: 1690px;
+          
+            height: 50px;
+            width: 100%;
+            background-color: #ca0040;
+            
+        }
+        .line1{
+          position: absolute;
+          top: 2420px;
+        
+          height: 50px;
+          width: 100%;
+          background-color: #ca0040;
+        }
+        .con{
+            position:absolute;
+            top: 1699px;
+        }
+        
+        .ab{
+          position: absolute;
+          top: 2430px;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+           /* bar */
+        
+        
+        :root {
+          --z24: translateZ(24.5px);
+          --z80: translateZ(80px);
+          --ts: all .5s ease;
+          --x90: rotateX(90deg);
+          --xm90: rotateX(-90deg);
+          --y90: rotateY(90deg);
+          --ym90: rotateY(-90deg);
+        }
+        
+        nav {
+          width: 100%;
+          padding: 16px 16px 0 16px;
+          position: relative;
+        }
+        
+        ol {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+        }
+        
+        .main-menu {
+          display: flex;
+          position: relative;
+          flex-flow: row wrap;
+          justify-content: center;
+        }
+        
+        li {
+          width: 160px;
+          position: relative;
+          cursor: pointer;
+        }
+        li span {
+          width: 100%;
+          height: 49px;
+          display: block;
+          position: relative;
+          transition: var(--ts);
+          transform-style: preserve-3d;
+        }
+        li span::before, li span::after {
+          width: 100%;
+          padding: 16px 0;
+          display: block;
+          position: absolute;
+          border-radius: 8px;
+          font: 400 14px "Consolas";
+          text-align: center;
+          text-transform: uppercase;
+        }
+        
+        .main-item:nth-of-type(2),
+        .main-item:nth-of-type(4) {
+          margin: 0 2px;
+        }
+        
+        .main-item:nth-of-type(3)::before,
+        .main-item:nth-of-type(4)::before {
+          width: 100%;
+          top: 25px;
+          display: block;
+          position: absolute;
+          color: #fff;
+          font: 400 24px "Consolas";
+          text-align: center;
+          transition: var(--ts);
+          z-index: 100;
+          content: "▾";
+        }
+        
+        .main-item:hover > span {
+          transform: var(--x90);
+        }
+        .main-item > span::before {
+          background: #000;
+          color: #fff;
+          transform: var(--z24);
+          box-shadow: 0 8px 6px -6px #888;
+        }
+        .main-item > span::after {
+          background: #ff9900;
+          transform: var(--xm90) var(--z24);
+        }
+        
+        .home::before, .home::after {
+          content: "home";
+        }
+        
+        .about::before, .about::after {
+          content: "about";
+        }
+        
+        .widgets::before, .widgets::after {
+          content: "Disease";
+        }
+        
+        .kabobs::before, .kabobs::after {
+          content: "Help";
+        }
+        
+        .contact::before, .contact::after {
+          content: "contact";
+        }
+        
+        .sub-menu {
+          top: 51px;
+          display: none;
+          position: absolute;
+        }
+        .sub-menu li {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        .sub-menu li:nth-of-type(2) {
+          margin: 2px 0;
+        }
+        
+        .sub-item:nth-of-type(1) {
+          -webkit-animation: fade 0.5s ease 0.2s both;
+                  animation: fade 0.5s ease 0.2s both;
+        }
+        
+        .sub-item:nth-of-type(2) {
+          -webkit-animation: fade 0.5s ease 0.4s both;
+                  animation: fade 0.5s ease 0.4s both;
+        }
+        
+        .sub-item:nth-of-type(3) {
+          -webkit-animation: fade 0.5s ease 0.6s both;
+                  animation: fade 0.5s ease 0.6s both;
+        }
+        
+        @-webkit-keyframes fade {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes fade {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .sub-item span::before {
+          background: #008080;
+          color: #fff;
+          transform: var(--z80);
+        }
+        .sub-item span::after {
+          background: #bc003b;
+          color: #fff;
+        }
+        
+        .item-left:hover span {
+          transform: var(--y90);
+        }
+        .item-left span::after {
+          transform: var(--ym90) var(--z80);
+        }
+        
+        .item-right:hover span {
+          transform: var(--ym90);
+        }
+        .item-right span::after {
+          transform: var(--y90) var(--z80);
+        }
+        
+        .small::before, .small::after {
+          content: "heart";
+        }
+        
+        .standart::before, .standart::after {
+          content: "lung";
+        }
+        
+        .big::before, .big::after {
+          content: "Diabities";
+        }
+        
+        .premium::before, .premium::after {
+          content: "Heart";
+        }
+        
+        .combo::before, .combo::after {
+          content: "Lung";
+        }
+        
+        .special::before, .special::after {
+          content: "Diabities";
+        }
+        
+        .main-item:nth-of-type(3):hover::before,
+        .main-item:nth-of-type(4):hover::before {
+          color: #000;
+          content: "▴";
+        }
+        .main-item:nth-of-type(3):hover .sub-menu,
+        .main-item:nth-of-type(4):hover .sub-menu {
+          display: block;
+        }
+        
+        @media screen and (min-width: 321px) and (max-width: 839px) {
+          nav {
+            width: 320px;
+            margin: 0 auto;
+          }
+        }
+        @media (max-width: 839px) {
+          .main-item:nth-of-type(2),
+        .main-item:nth-of-type(4) {
+            margin: 3px 0;
+          }
+        
+          .sub-menu {
+            position: relative;
+            top: 1px;
+            padding: 2px 0 1px 0;
+          }
+          .sub-menu li span::before {
+            transform: var(--z24);
+          }
+          .sub-menu li span::after {
+            transform: rotateY(0deg) var(--x90) var(--z24);
+          }
+          .sub-menu li:hover span {
+            transform: var(--xm90);
+          }
+        }
+        .bar{
+            position:absolute;
+            top: 60px;
+            right: 30px;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                                                                       
+                                                                  /* slide */
+        
+        
+        
+        
+        /* Main Rules */
+        :root {
+          --white-c: #fff;
+          --black-c: #000;
+          --body-background-c: #fd7ac0;
+          --wrapper-background-c: #d4f1f4;
+          --wrapper-shadow-c: rgba(0, 0, 0, 0.219);
+          --buttons-background-c: rgba(255, 255, 255, 0.219);
+          --buttons-active-background-c: rgba(135, 207, 235, 0.493);
+        }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        /* End Main Rules */
+        
+        /* Wrapper */
+        .wrapper {
+          width: 1400px;
+          height: 540px;
+          position: relative;
+        
+          box-shadow: 0 0 80px var(--wrapper-shadow-c);
+        }
+        
+        /* Images Area */
+        .images-area {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          display: flex;
+          overflow: hidden;
+        }
+        .images-area img {
+          width: 100%;
+          transition: 0.3s cubic-bezier(0.79, 0.03, 0, 0.99);
+        }
+        
+        /* Buttons Area  */
+        .buttons-area {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          display: flex;
+          justify-content: space-between;
+          overflow: hidden;
+        }
+        .buttons-area > div {
+          color: var(--white-c);
+          background-color: var(--buttons-background-c);
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+        }
+        /* Buttons | Previous And Next */
+        .buttons-area > div:first-child {
+          border-radius: 0 5px 5px 0;
+          margin-left: -100px;
+        }
+        .buttons-area > div:last-child {
+          border-radius: 5px 0 0 5px;
+          margin-right: -100px;
+        }
+        /* Show The Buttons */
+        .wrapper:hover .buttons-area > div:first-child {
+          margin-left: 0;
+        }
+        .wrapper:hover .buttons-area > div:last-child {
+          margin-right: 0;
+        }
+        .buttons-area div:hover:not(div.disabled) {
+          background-color: var(--buttons-active-background-c);
+        }
+        .buttons-area div:not(div.disabled):active {
+          opacity: 0.7;
+        }
+        /* Disabled Button */
+        .buttons-area > div.disabled {
+          cursor: no-drop;
+          opacity: 0.3;
+        }
+        .buttons-area div i {
+          font-size: 70px;
+        }
+        
+        /* Pagination Area */
+        .pagination-area {
+          position: absolute;
+          top: 90%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+        }
+        /* Pagination Spans */
+        .pagination-area span {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: var(--white-c);
+          margin-right: 5px;
+          transform: scale(0.5);
+          transition: 0.3s ease-in-out;
+          opacity: 0.4;
+        }
+        /* Current Active Span */
+        .pagination-area span.active {
+          transform: scale(1);
+          opacity: 1;
+        }
+        
+        /* End Wrapper */
+        .slide{
+            position: absolute;
+            top:200px;
+            right:30px;
+            
+        }
+        
+                           
+                                   /* disease Wrapper */
+        
+        
+        
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .wrappers {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .card {
+            position: relative;
+            width: 350px;
+            height: 350px;
+        }
+        
+        .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .5s;
+        }
+        
+        .card .front {
+            transform: perspective(600px) rotateY(0deg);
+            box-shadow: 0 5px 10px #fff;
+        }
+        
+        .card .front img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .text-h1 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            background: rgba(0, 0, 0, .4);
+            text-align: center;
+        }
+        
+        .card .back {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        
+            transform: perspective(600px) rotateY(180deg);
+            background: rgb(3, 35, 54);
+            padding: 15px;
+            color: crimson;
+            text-align: center;
+            box-shadow: 0 5px 10px #fff;
+        }
+        
+        
+        
+        .links {
+            border-top: 1px solid crimson;
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        .link-a {
+            color: crimson;
+        }
+        
+        .card .back .text-h2 {
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+        
+        .card .back .text-p {
+            letter-spacing: 1px;
+        }
+        
+        .card:hover .front {
+            transform: perspective(600px) rotateY(180deg);
+        }
+        
+        .card:hover .back {
+            transform: perspective(600px) rotateY(360deg);
+        }
+        .dis{
+            position: absolute;
+            top: 1900px;
+            right: 3 9px;
+        }
+        
+.container {
+  
+  position:absolute;
+  top: 3700px;
+
+
+}  
+h1 {
+  text-align: center;
+  color: #333;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}
+.iq{
+  position: relative;
+  top: 3700px;
+  left: 170px;
+}
+
+.model {
+  font-family: Arial, sans-serif; /* Sets the font */
+  font-size: 25px; /* Sets the font size */
+  color: #333; /* Sets the text color */
+  line-height: 1.5; /* Sets the line height for readability */
+
+  
+  
+  position: absolute;
+  top: 3300px;
+  left: 1120px;
+}
+.ml{
+  position: absolute;
+  top: 2600px;
+  left: 130px;
+}
+.me{
+  background-color:rgba(25, 25, 25, 1);
+  width: 100%;
+  height: 320px;
+  position: absolute;
+  top: 5000px;
+}
+.footer{
+  position: absolute;
+  top: 5000px;
+}
+
+
+
+
+
+
+
+
+
+.footer .contact {
+  position: absolute;
+  left: 110px;
+}
+
+.footer h3 {
+   margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+   display: flex;
+   align-items: center;
+   margin-bottom: 5px;
+}
+
+.footer img {
+   margin-right: 10px;
+}
+
+.footer a img {
+   width: 39px;
+   height: 39px;
+}
+
+.footer .social a {
+   margin-bottom: 10px;
+}
+.social{
+  position:relative;
+  right:  -570px;
+  top: -20px;
+
+}
+.contact1{
+   position:relative;
+   left: -470px;
+   top: 90px;
+}
+.co{
+  position:absolute;
+  top: 5030px;
+  left: 170px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: aliceblue;
+}
+.fo{
+  position: absolute;
+  top: 5030px;
+  right: 200px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: aliceblue;
+}
+.c{
+
+  position: absolute;
+  top: 5300px;
+  height: 20px;
+  width: 20px;
+  left: 629px;
+  
+}
+.my{
+  position: absolute;
+  top: 5301px;
+  font-size: small;
+  color: rgba(58, 71, 77, 1);
+
+}
+        
+        
+        
+        
+        
+        
+
+
+    </style>
+   
+    <title>Disease Prediction</title>
+</head>
+
+
+
+<body>
+  
+    <section>
+        <img class="logo" src="{{ url_for('static', filename='asset/heart_disease_prediction_logo2_.png ') }}" alt="tyre" height="120px" width="120px">
+        <h2 class="head">Disease Prediction</h2>
+    </section>
+
+    <section class="slide">
+        <!-- Wrapper -->
+        <div class="wrapper">
+            <!-- Images Area -->
+            <div class="images-area">
+              
+            <img src="{{ url_for('static', filename='asset/Rectangle 4.png') }}" alt="image" class="firstImage">
+            <img src="{{ url_for('static', filename='asset/Rectangle 3.png') }}" alt="image">
+            <img src="{{ url_for('static', filename='asset/Rectangle 1.png') }}" alt="image">
+           
+            </div>
+            <!-- Buttons Area -->
+            <div class="buttons-area">
+            <div class="previous-btn">
+                <i class='bx bx-chevron-left'></i>
+            </div>
+            <div class="next-btn">
+                <i class='bx bx-chevron-right'></i>
+            </div>
+            </div>
+            <!-- Pagination Area -->
+            <div class="pagination-area">
+            </div>
+        </div>
+        <!-- End Wrapper -->
+    </section>
+
+    <section class="bar">
+                
+        <nav>
+            <ol class="main-menu">
+                    <li class="main-item"><span class="home"></span></li>
+                    <li class="main-item"><span class="about"></span></li>
+                    <li class="main-item"><span class="widgets"></span>
+                        <ol class="sub-menu">
+                            <li  class="sub-item item-left"><a href="\d1"><span class="small"></span></li></a>
+                            <li class="sub-item item-left"><a href="\d2"><span class="standart"></span></li></a>
+                            <li class="sub-item item-left"><a href="\d3"><span class="big"></span></li></a>
+                        </ol>
+                    </li>
+                    <li class="main-item"><span class="kabobs"></span>
+                        <ol class="sub-menu">
+                            <li  class="sub-item item-left"><a href="\h1"><span class="premium"></span></li></a>
+                            <li class="sub-item item-left"><a href="\h2"><span class="combo"></span></li></a>
+                            <li class="sub-item item-left"><a href="\h3"><span class="special"></span></li></a>
+                        
+                        </ol>
+                    </li>
+                
+                    </ol>
+                </nav>
+                
+    </section>
+    <diV class="bns2"></div>
+
+    <h1 class="bns1">Mission and Vision</h1>
+    <h1 class="bns3">Dr Shawn Murphy</h1>
+
+ 
+        
+    <img class="bns" src="{{ url_for('static', filename='asset/bns.png') }}" alt="">
+
+
+   
+
+    <div class="line" id="disease"></div>
+    <h1 class="con">Disease Prediction</h1>
+
+
+
+
+
+<!-- End Wrapper -->
+
+    <section class="dis">
+        <div class="wrappers">
+
+            <div class="card">
+        
+                <div class="face front">
+                    <img src="{{ url_for('static', filename='asset/hearts.jpg') }}" alt="city">
+                    <h1 class="text-h1">Heart Disease</h1>
+                </div>
+        
+                <div class="face back" id="HERT">
+                    <h2 class="text-h2">Heart Disease</h2>
+                    <p class="text-p">
+                      Heart disease is a condition where the heart's ability to function is impaired due to blockages, weakened muscles, or abnormal rhythms, leading to serious health issues.
+                    </p>
+                    <div class="links">
+                        <a class="link-a" href="\d1">Prediction</a>
+                    </div>
+                </div>
+        
+            </div>
+        
+            <div class="card">
+        
+                <div class="face front">
+                    <img src="{{ url_for('static', filename='asset/lung.jpg') }}" alt="city">
+                    <h1 class="text-h1">Lung Disease</h1>
+                </div>
+        
+                <div class="face back">
+                    <h2 class="text-h2">Lung Disease</h2>
+                    <p class="text-p">
+                      Lung disease affects the lungs, causing difficulty in breathing due to conditions like asthma, COPD, or infections, significantly impacting overall respiratory health.
+                    </p>
+                    <div class="links">
+                        <a class="link-a" href="\d2">Prediction</a>
+                    </div>
+                </div>
+        
+            </div>
+        
+            <div class="card">
+        
+                <div class="face front">
+                    <img src="{{ url_for('static', filename='asset/diabites.jpg') }}" alt="city">
+                    <h1 class="text-h1">Diabites</h1>
+                </div>
+        
+                <div class="face back">
+                    <h2 class="text-h2">Diabites</h2>
+                    <p class="text-p">
+                      Diabetes is a chronic condition where the body struggles to regulate blood sugar levels due to insufficient insulin production or insulin resistance.
+                    </p>
+                    <div class="links">
+                        <a class="link-a" href="\d3">Prediction</a>
+                    </div>
+                </div>
+        
+            </div>
+        
+        </div>
+    
+    
+        
+    </section>
+
+    
+      <div class="line1">
+        
+      </div>
+      <h1 class="ab">About</h1>
+
+      <img class="vi" src="{{ url_for('static', filename='asset/vi.png') }}" alt="">
+
+      <div class="me"></div>
+
+   
+
+      
+   
+
+
+
+        <section class="iq">
+
+          <img src="{{ url_for('static', filename='asset/accuricy.png') }}" height="1700px" width="1000px" alt="">
+        </section>
+
+        <h2 class="my">Designed by Noorul Suhail</h2>
+
+    
+          
+
+
+        <section class="dr1">
+          <img class="dr" src="{{ url_for('static', filename='asset/Rectangle 8.png') }}" alt="dr" height="550px" width="360px">
+          
+         </section>
+
+         <img class="ml" src="{{ url_for('static', filename='asset/ml1.png') }}" alt="" height="550px" width="460px">
+
+         <footer class="footer">
+      
+          <div class="contact1">
+             
+              <p><img src="{{ url_for('static', filename='asset/ph.png') }}" alt="Email" height="30px" width="30px"> +91 8489987509</p>
+              <p><img src="{{ url_for('static', filename='asset/whatsapp.png') }}" alt="WhatsApp" height="30px" width="30px"> +91 8489987509</p>
+              <p><img src="{{ url_for('static', filename='asset/gmail.png') }}" alt="Gmail" height="30px" width="30px"> suhailbns243@gmail.com</p>
+          </div>
+          <div class="social">
+            
+              <a href="https://www.instagram.com/suhail_official___/?hl=en"><img src="{{ url_for('static', filename='asset/insta.png') }}" alt="Instagram"></a>
+              <a href="#"><img src="{{ url_for('static', filename='asset/face.png') }}" alt="Facebook"></a>
+              <a href="#"><img src="{{ url_for('static', filename='asset/link.png') }}" alt="LinkedIn"></a>
+         
+          </div>
+      </footer>
+    <h2 class="co">Contact</h2>
+    <h2 class="fo">Follow Us</h2>
+    <img class="c" src="{{ url_for('static', filename='asset/c.png') }}" alt="copy" >
+  
+
+
+
+
+
+
+
+
+
+   
+   
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
